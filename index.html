@@ -82,7 +82,13 @@
             </button>
         </div>
 
-        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu" id="mobile-menu" inert>
+            <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Cerrar menú">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
             <nav class="mobile-menu__nav">
                 <a href="#inicio" class="mobile-menu__link">Inicio</a>
                 <a href="#servicios" class="mobile-menu__link">Servicios</a>
@@ -118,14 +124,14 @@
                             <h2 class="work-order-glass__subtitle">Cerrajería Profesional Gran Mendoza</h2>
                             <ul class="work-order-glass__list">
                                 <li><strong>TIEMPO ESTIMADO:</strong> Menos de 30 minutos</li>
-                                <li><strong>GARANTÍA:</strong> Escrita en mano de obra y materiales</li>
-                                <li><strong>TARIFA:</strong> Presupuesto sin cargo antes de empezar</li>
+                                <li><strong>GARANTÍA:</strong> Total y por escrito</li>
+                                <li><strong>PRESUPUESTO:</strong> Sin cargo en el acto</li>
                             </ul>
                         </div>
                         <div class="work-order-glass__ctas">
                             <a href="https://wa.me/542614000000?text=Hola%2C%20necesito%20un%20cerrajero%20urgente" class="btn btn--whatsapp contact-whatsapp" data-wa-text="Hola, necesito un cerrajero urgente" target="_blank" rel="noopener noreferrer">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-                                WHATSAPP RÁPIDO
+                                SOLICITAR CERRAJERO AHORA
                             </a>
                         </div>
                     </div>
@@ -179,6 +185,7 @@
                 <div class="section-label animate-slide-left">Áreas de Servicio</div>
                 <h2 class="section-title animate-slide-left">COBERTURA EN TODO EL <span class="text-accent">GRAN MENDOZA</span></h2>
                 <p class="section-subtitle animate-on-scroll">Llegamos a cada rincón del Gran Mendoza en tiempo récord. Sin importar la hora, estamos cerca tuyo.</p>
+                <div class="mobile-scroll-hint d-md-none">← Deslizá para ver más →</div>
                 <div class="coverage-grid animate-on-scroll">
                     <!-- Zone 1 -->
                     <div class="coverage-zone stagger-1" data-zone="godoy-cruz">
@@ -397,47 +404,50 @@
         <!-- ═══ DIAGONAL DIVIDER (gray to emerald) ═══ -->
         <div class="divider-diagonal divider-diagonal--gray-to-emerald"></div>
 
-        <!-- ═══════════════════ VALORES ═══════════════════ -->
-        <section class="values" id="valores">
-            <div class="values__container">
-                <div class="section-label section-label--dark animate-slide-left">Nuestro Compromiso</div>
-                <h2 class="section-title section-title--light animate-slide-left">TRANSPARENCIA TOTAL: <span class="text-accent-light">SIN CHAMUYO NI SORPRESAS</span></h2>
-                <p class="section-subtitle section-subtitle--light animate-on-scroll">Trabajamos con honestidad, claridad y responsabilidad. Sabés lo que pagás antes de que empecemos.</p>
-
-                <div class="values__grid">
-                    <div class="glow-card animate-slide-up stagger-1">
-                        <div class="glow-card__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                        </div>
-                        <h3 class="glow-card__title">Rapidez Real</h3>
-                        <p class="glow-card__desc">Llegamos en menos de 30 minutos a cualquier punto del Gran Mendoza. Sin excusas.</p>
-                        <div class="glow-card__metric">
-                            <span class="glow-card__number" data-count="30">0</span>
-                            <span class="glow-card__unit">minutos</span>
+        <!-- ═══════════════════ STICKY PLATES ═══════════════════ -->
+        <section class="sticky-plates" id="valores">
+            <div class="sticky-plates__header">
+                <h2 class="sticky-plates__main-title animate-slide-up">NUESTRO COMPROMISO</h2>
+                <p class="sticky-plates__subtitle animate-slide-up">Un servicio claro desde el primer contacto.</p>
+            </div>
+            
+            <div class="sticky-plates__track">
+                <div class="plate plate--1">
+                    <div class="plate__content">
+                        <div class="plate__number">01</div>
+                        <div class="plate__text">
+                            <h3 class="plate__title">NOS ESCRIBÍS</h3>
+                            <p class="plate__desc">Contanos qué pasó. Nos das tu ubicación y evaluamos la urgencia.</p>
                         </div>
                     </div>
-
-                    <div class="glow-card animate-slide-up stagger-2">
-                        <div class="glow-card__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        </div>
-                        <h3 class="glow-card__title">Precio Claro</h3>
-                        <p class="glow-card__desc">Te decimos cuánto cuesta antes de empezar. Sin letra chica, sin cargos ocultos.</p>
-                        <div class="glow-card__metric">
-                            <span class="glow-card__number">100<small>%</small></span>
-                            <span class="glow-card__unit">transparencia</span>
+                </div>
+                
+                <div class="plate plate--2">
+                    <div class="plate__content">
+                        <div class="plate__number">02</div>
+                        <div class="plate__text">
+                            <h3 class="plate__title">TE RESPONDEMOS</h3>
+                            <p class="plate__desc">Precio y tiempo estimado antes de salir. Sin letra chica.</p>
                         </div>
                     </div>
-
-                    <div class="glow-card animate-slide-up stagger-3">
-                        <div class="glow-card__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                
+                <div class="plate plate--3">
+                    <div class="plate__content">
+                        <div class="plate__number">03</div>
+                        <div class="plate__text">
+                            <h3 class="plate__title">VAMOS</h3>
+                            <p class="plate__desc">Un técnico sale de inmediato. Te avisamos cuando estamos llegando.</p>
                         </div>
-                        <h3 class="glow-card__title">Trabajo Garantizado</h3>
-                        <p class="glow-card__desc">Todos nuestros trabajos incluyen garantía. Si algo sale mal, volvemos sin costo.</p>
-                        <div class="glow-card__metric">
-                            <span class="glow-card__number">+2.000</span>
-                            <span class="glow-card__unit">trabajos</span>
+                    </div>
+                </div>
+                
+                <div class="plate plate--4">
+                    <div class="plate__content">
+                        <div class="plate__number">04</div>
+                        <div class="plate__text">
+                            <h3 class="plate__title">LO RESOLVEMOS</h3>
+                            <p class="plate__desc">Acceso restaurado. Trabajo rápido y terminado con garantía.</p>
                         </div>
                     </div>
                 </div>
@@ -453,10 +463,10 @@
                 <div class="section-label section-label--dark animate-slide-left">Casos Reales</div>
                 <h2 class="section-title section-title--light animate-slide-left">CASOS <span class="text-accent">REALES</span></h2>
                 <p class="section-subtitle section-subtitle--light animate-on-scroll">No prometemos, demostramos. Mirá cómo resolvemos problemas reales.</p>
-                
+                <div class="mobile-scroll-hint d-md-none">← Deslizá para ver más →</div>
                 <div class="casos-reales__grid">
-                    <div class="caso-card animate-on-scroll stagger-1">
-                        <img src="assets/gallery-1.jpg" alt="Instalación de cerradura de alta seguridad" loading="lazy" width="400" height="250" class="caso-card__img">
+                    <div class="caso-card caso-card--featured animate-on-scroll stagger-1">
+                        <img src="assets/gallery-1.jpg" alt="Instalación de cerradura de alta seguridad" loading="lazy" width="800" height="400" class="caso-card__img">
                         <div class="caso-card__content">
                             <p><strong>PROBLEMA:</strong> Cliente perdió llaves de blindex comercial.</p>
                             <p><strong>SOLUCIÓN:</strong> Extracción sin daño y reemplazo de tambor de alta seguridad.</p>
@@ -604,7 +614,7 @@
                     <div class="cta-final__buttons">
                         <a href="https://wa.me/542614000000?text=Hola%2C%20necesito%20un%20cerrajero%20urgente" class="btn btn--whatsapp contact-whatsapp" target="_blank" rel="noopener noreferrer">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                            WHATSAPP RÁPIDO
+                            SOLICITAR CERRAJERO AHORA
                         </a>
                     </div>
                 </div>
@@ -638,7 +648,7 @@
             <div class="footer__contact">
                 <h4 class="footer__title">Contacto</h4>
                 <a href="#" class="protected-email" data-user="contacto" data-domain="entodaspuertas.com.ar">contacto@entodaspuertas.com.ar</a>
-                <a href="https://wa.me/542614000000?text=Hola" target="_blank" rel="noopener noreferrer" class="footer__wa">WhatsApp Rápido</a>
+                <a href="https://wa.me/542614000000?text=Hola" target="_blank" rel="noopener noreferrer" class="footer__wa">Solicitar Cerrajero Ahora</a>
             </div>
         </div>
         <div class="footer__bottom">

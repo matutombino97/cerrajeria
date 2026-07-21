@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('is-loading');
     initHeader();
     initMobileMenu();
-    initScrollAnimations();
+    initMagneticGlow();
     initCounterAnimations();
     initSmoothScrollLinks();
     initBentoTabs();
@@ -45,6 +45,7 @@ function initHeader() {
 function initMobileMenu() {
     const toggle = document.getElementById('mobile-menu-toggle');
     const menu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('mobile-menu-close');
     if (!toggle || !menu) return;
 
     const links = menu.querySelectorAll('.mobile-menu__link, .mobile-menu__cta');
@@ -57,6 +58,10 @@ function initMobileMenu() {
             openMenu();
         }
     });
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+    }
 
     links.forEach(link => link.addEventListener('click', closeMenu));
 
@@ -64,7 +69,7 @@ function initMobileMenu() {
         menu.classList.add('is-open');
         toggle.classList.add('is-active');
         toggle.setAttribute('aria-expanded', 'true');
-        menu.setAttribute('aria-hidden', 'false');
+        menu.inert = false;
         document.body.style.overflow = 'hidden';
     }
 
@@ -72,37 +77,39 @@ function initMobileMenu() {
         menu.classList.remove('is-open');
         toggle.classList.remove('is-active');
         toggle.setAttribute('aria-expanded', 'false');
-        menu.setAttribute('aria-hidden', 'true');
+        menu.inert = true;
         document.body.style.overflow = '';
     }
 }
 
-/* ═══ Advanced Scroll Animations with Stagger ═══ */
-function initScrollAnimations() {
-    const selectors = '.animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-scale';
-    const elements = document.querySelectorAll(selectors);
-    if (!elements.length) return;
+/* ═══ Magnetic Glow Effect ═══ */
+function initMagneticGlow() {
+    // Select cards or buttons that should have the magnetic glow effect
+    const magneticElements = document.querySelectorAll('.caso-card, .cta-button, .glow-card');
+    
+    if (!magneticElements.length) return;
 
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-        elements.forEach(el => el.classList.add('is-visible'));
-        return;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+    magneticElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            // Calculate mouse position relative to the element
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Set CSS variables for the background gradient position
+            el.style.setProperty('--mouse-x', `${x}px`);
+            el.style.setProperty('--mouse-y', `${y}px`);
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
+        
+        // Reset when mouse leaves (optional, but good for some effects)
+        el.addEventListener('mouseleave', () => {
+            el.style.setProperty('--mouse-x', `50%`);
+            el.style.setProperty('--mouse-y', `50%`);
+        });
     });
-
-    elements.forEach(el => observer.observe(el));
 }
+
+
 
 /* ═══ Animated counters ═══ */
 function initCounterAnimations() {
