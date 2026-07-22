@@ -29,7 +29,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css?v=5">
 
@@ -114,28 +114,25 @@
             <div class="hero-premium__bg" style="background-image: url('assets/gallery-1.jpg');"></div>
             <div class="hero-premium__overlay"></div>
             <div class="hero-premium__container">
-                <h1 class="hero-premium__title animate-on-scroll">
-                    ¿TE QUEDASTE <span class="text-accent-hero">AFUERA?</span>
-                </h1>
-                
-                <div class="work-order-glass animate-scale">
-                    <div class="work-order-glass__stamp">
-                        <span>MATRÍCULA<br>VERIFICADA</span>
-                    </div>
-                    <div class="work-order-glass__form">
-                        <div class="work-order-glass__header">
-                            <span class="work-order-glass__id">#URGENCIAS-247</span>
-                            <span class="work-order-glass__status">ESTADO: ACTIVO <span class="status-dot"></span></span>
+                <div class="hero-premium__content">
+                    <h1 class="hero-premium__title animate-on-scroll">
+                        SABÉS QUÉ VA <span class="text-accent-hero">A PASAR.</span>
+                    </h1>
+                    
+                    <div class="tech-card animate-on-scroll">
+                        <div class="tech-card__header">
+                            <span class="tech-card__id">ID: URGENCIAS-247</span>
+                            <span class="tech-card__status">ESTADO: <span class="status-indicator">●</span> ACTIVO</span>
                         </div>
-                        <div class="work-order-glass__details">
-                            <h2 class="work-order-glass__subtitle">Cerrajería Profesional Gran Mendoza</h2>
-                            <ul class="work-order-glass__list">
-                                <li><strong>TIEMPO ESTIMADO:</strong> Menos de 30 minutos</li>
-                                <li><strong>GARANTÍA:</strong> Total y por escrito</li>
-                                <li><strong>PRESUPUESTO:</strong> Sin cargo en el acto</li>
+                        <div class="tech-card__details">
+                            <p class="tech-card__subtitle">Un servicio claro desde el primer momento.</p>
+                            <ul class="tech-card__list">
+                                <li><strong>LLEGADA:</strong> ~15-30 MINUTOS</li>
+                                <li><strong>GARANTÍA:</strong> TOTAL POR ESCRITO</li>
+                                <li><strong>COTIZACIÓN:</strong> PREVIA SIN CARGO</li>
                             </ul>
                         </div>
-                        <div class="work-order-glass__ctas">
+                        <div class="tech-card__ctas">
                             <a href="https://wa.me/542614000000?text=Hola%2C%20necesito%20un%20cerrajero%20urgente" class="btn btn--whatsapp contact-whatsapp" data-wa-text="Hola, necesito un cerrajero urgente" target="_blank" rel="noopener noreferrer">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                                 SOLICITAR CERRAJERO AHORA
@@ -143,11 +140,56 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="hero-premium__visual animate-on-scroll">
+                    <!-- Signature SVG: Pin tumbler lock technical drawing -->
+                    <svg class="blueprint-lock" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .blueprint-line { stroke: var(--steel); stroke-width: 1.5; stroke-dasharray: 4 2; opacity: 0.5; }
+                            .blueprint-solid { stroke: var(--steel); stroke-width: 2; }
+                            .blueprint-accent { stroke: var(--rust); stroke-width: 2.5; }
+                            .blueprint-fill { fill: var(--iron); }
+                            .blueprint-text { fill: var(--steel); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px; }
+                        </style>
+                        
+                        <!-- Reference lines -->
+                        <line x1="50" y1="200" x2="450" y2="200" class="blueprint-line" />
+                        <line x1="250" y1="50" x2="250" y2="350" class="blueprint-line" />
+                        <circle cx="250" cy="200" r="120" class="blueprint-solid" />
+                        <circle cx="250" cy="200" r="100" class="blueprint-solid" stroke-dasharray="8 4" opacity="0.7" />
+                        
+                        <!-- Core Plug (Tambor) -->
+                        <circle cx="250" cy="200" r="60" class="blueprint-solid" fill="rgba(196, 192, 181, 0.05)" />
+                        
+                        <!-- Keyway -->
+                        <path d="M245 150 L255 150 L255 190 L265 200 L255 210 L255 230 L245 230 L245 215 L235 205 L245 195 Z" class="blueprint-solid blueprint-fill" />
+                        
+                        <!-- Pins -->
+                        <!-- Pin 1 -->
+                        <rect x="235" y="80" width="10" height="30" class="blueprint-solid" />
+                        <rect x="235" y="115" width="10" height="35" class="blueprint-accent" />
+                        <!-- Pin 2 -->
+                        <rect x="255" y="80" width="10" height="40" class="blueprint-solid" />
+                        <rect x="255" y="125" width="10" height="25" class="blueprint-solid" />
+                        
+                        <!-- Annotations -->
+                        <text x="60" y="195" class="blueprint-text">SHEAR LINE</text>
+                        <line x1="140" y1="195" x2="160" y2="195" class="blueprint-line" />
+                        
+                        <text x="380" y="90" class="blueprint-text">DRIVER PIN (T)</text>
+                        <line x1="375" y1="90" x2="265" y2="90" class="blueprint-line" />
+                        
+                        <text x="380" y="140" class="blueprint-text" fill="var(--rust)">KEY PIN (B)</text>
+                        <line x1="375" y1="135" x2="250" y2="135" class="blueprint-accent" />
+                    </svg>
+                </div>
+            </div>
             </div>
         </section>
 
         <!-- ═══════════════════ STATS & BRANDS ═══════════════════ -->
         <section class="stats-band" id="stats">
+            <!-- TODO: reemplazar con datos reales del cliente -->
             <div class="stats-band__container">
                 <div class="stat-item animate-on-scroll stagger-1">
                     <span class="stat-item__number" data-count="2300" data-prefix="+">+0</span>
@@ -164,21 +206,13 @@
             </div>
             <div class="stats-band__brands animate-on-scroll">
                 <p class="brands-title">ESPECIALISTAS EN PRIMERAS MARCAS</p>
-                <div class="brands-strip">
-                    <div class="marquee-track">
-                        <span class="brand-item">YALE</span>
-                        <span class="brand-item">TRABEX</span>
-                        <span class="brand-item">KALLAY</span>
-                        <span class="brand-item">ACYTRA</span>
-                        <span class="brand-item">MUL-T-LOCK</span>
-                        <span class="brand-item">PRIVÉ</span>
-                        <span class="brand-item">YALE</span>
-                        <span class="brand-item">TRABEX</span>
-                        <span class="brand-item">KALLAY</span>
-                        <span class="brand-item">ACYTRA</span>
-                        <span class="brand-item">MUL-T-LOCK</span>
-                        <span class="brand-item">PRIVÉ</span>
-                    </div>
+                <div class="brands-strip static-brands">
+                    <span class="brand-item">YALE</span>
+                    <span class="brand-item">TRABEX</span>
+                    <span class="brand-item">KALLAY</span>
+                    <span class="brand-item">ACYTRA</span>
+                    <span class="brand-item">MUL-T-LOCK</span>
+                    <span class="brand-item">PRIVÉ</span>
                 </div>
             </div>
         </section>
@@ -540,6 +574,7 @@
 
         <!-- ═══════════════════ TESTIMONIOS ═══════════════════ -->
         <section class="testimonials bg-surface" id="testimonios">
+            <!-- TODO: reemplazar con datos reales del cliente -->
             <div class="testimonials__container">
                 <div class="section-label animate-slide-left">Reseñas Reales</div>
                 <h2 class="section-title animate-slide-left">CLIENTES <span class="text-accent">SATISFECHOS</span></h2>

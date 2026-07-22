@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('is-loading');
     initHeader();
     initMobileMenu();
-    initMagneticGlow();
     initCounterAnimations();
     initSmoothScrollLinks();
     initBentoTabs();
@@ -81,35 +80,6 @@ function initMobileMenu() {
         document.body.style.overflow = '';
     }
 }
-
-/* ═══ Magnetic Glow Effect ═══ */
-function initMagneticGlow() {
-    // Select cards or buttons that should have the magnetic glow effect
-    const magneticElements = document.querySelectorAll('.caso-card, .cta-button, .glow-card');
-    
-    if (!magneticElements.length) return;
-
-    magneticElements.forEach(el => {
-        el.addEventListener('mousemove', (e) => {
-            const rect = el.getBoundingClientRect();
-            // Calculate mouse position relative to the element
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            // Set CSS variables for the background gradient position
-            el.style.setProperty('--mouse-x', `${x}px`);
-            el.style.setProperty('--mouse-y', `${y}px`);
-        });
-        
-        // Reset when mouse leaves (optional, but good for some effects)
-        el.addEventListener('mouseleave', () => {
-            el.style.setProperty('--mouse-x', `50%`);
-            el.style.setProperty('--mouse-y', `50%`);
-        });
-    });
-}
-
-
 
 /* ═══ Animated counters ═══ */
 function initCounterAnimations() {
