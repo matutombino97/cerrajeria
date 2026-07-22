@@ -269,7 +269,9 @@ img { max-width: 100%; height: auto; display: block; }
 .header__mobile-toggle.is-active .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 .mobile-menu {
-    display: none; position: fixed; inset: 0; background: rgba(0,26,51,0.97);
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--iron); border-top: 1px solid var(--steel);
+    box-shadow: var(--shadow-xl); padding: 2rem 1.5rem;
     z-index: 999; align-items: center; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity var(--transition-normal);
 }
@@ -280,13 +282,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-family: var(--font-heading); transition: color var(--transition-fast);
 }
 .mobile-menu__link:hover { color: var(--color-emerald); }
-.mobile-menu__close {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    background: none; border: none; color: var(--color-white);
-    cursor: pointer; padding: 0.5rem; display: flex;
-    transition: transform var(--transition-fast), color var(--transition-fast);
-}
-.mobile-menu__close:hover { color: var(--color-emerald); transform: scale(1.1); }
+
 
 /* ═══════════════════ HERO ═══════════════════ */
 .hero-premium {
