@@ -372,6 +372,11 @@ img { max-width: 100%; height: auto; display: block; }
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 .btn--whatsapp:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); }
+.btn--rust {
+    background: var(--rust); color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(107, 31, 31, 0.3);
+}
+.btn--rust:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(107, 31, 31, 0.4); }
 
 /* ═══════════════════ STATS BAND ═══════════════════ */
 .stats-band {
@@ -871,7 +876,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--color-white);
     margin-bottom: 1rem;
 }
-.cta-final__title-break { display: block; color: #14B8A6; }
+.cta-final__title-break { display: block; color: var(--rust); }
 .cta-final__subtitle { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2rem; }
 .cta-final__buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
@@ -892,7 +897,7 @@ img { max-width: 100%; height: auto; display: block; }
     display: block; color: rgba(255,255,255,0.5); font-size: 0.9rem;
     margin-bottom: 0.5rem; transition: color var(--transition-fast);
 }
-.footer__links a:hover, .footer__contact a:hover { color: var(--color-emerald); }
+.footer__links a:hover, .footer__contact a:hover { color: var(--brass); }
 .footer__bottom {
     max-width: var(--max-width); margin: 0 auto; padding: 1.5rem;
     border-top: 1px solid rgba(255,255,255,0.08);
